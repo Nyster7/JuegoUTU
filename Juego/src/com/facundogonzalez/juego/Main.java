@@ -127,19 +127,7 @@ public class Main {
 				break;
 			}
 		}
-		
-		// Edad
-		boolean confirmarEdad = false;
-		while(confirmarEdad == false) {
-			Logica.imprimirEncabezado("En que barrio resides?");	
-			edadJugador = sc.nextInt();
-			int respuesta = Logica.eleccionJugador("Tienes " + edadJugador + " aï¿½os. \nEs correcto? \n1. Si \n2. No" , 2);
-			if (respuesta == 1) {
-				confirmarEdad = true;
-				break;
-			}
-		}
-		
+			
 		// Institucion
 		boolean confirmarInstitucion = false;
 		while(confirmarInstitucion == false) {
@@ -164,6 +152,18 @@ public class Main {
 			}
 		}
 		
+		// Edad
+				boolean confirmarEdad = false;
+				while(confirmarEdad == false) {
+					Logica.imprimirEncabezado("Que edad tienes?");	
+					edadJugador = sc.nextInt();
+					
+					int respuesta = Logica.eleccionJugador("Tienes " + edadJugador + " años. \nEs correcto? \n1. Si \n2. No" , 2);
+					if (respuesta == 1) {
+						confirmarEdad = true;
+						break;
+					}
+				}
 		
 		// Uso de metodo para elegir raza 
 		jugador.elegirRaza();
